@@ -59,6 +59,10 @@
   background-color: transparent;
   color: $form-color-grey;
 }
+.placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
 .form__button {
   width: 100%;
   padding: 10px 13px;
@@ -69,4 +73,28 @@
   cursor: pointer;
   @include font(12px, 15px, 400, $inter-family);
   margin-top: 8px;
+}
+::-webkit-input-placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
+:-moz-placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
+::-moz-placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
+:-ms-input-placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
+::-ms-input-placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
+}
+::placeholder {
+  color: $form-color-grey;
+  @include font(12px, 15px, 400, $second-family);
 }
