@@ -1,9 +1,21 @@
+html {
+  background: rgba(255, 254, 251, 0.8);
+}
 .body__lock {
   overflow: hidden;
 }
 .body--lock {
   position: fixed;
   overflow-y: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.body--lock::after {
+  content: " ";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   right: 0;
   left: 0;

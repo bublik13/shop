@@ -22,7 +22,7 @@ $form-box-shadow-bg-width: rgba(0, 0, 0, 0.02);
 $form-box-shadow-bg-smoll: rgba(0, 0, 0, 0.1);
 $list-box-shadow-bg-height: rgba(0, 0, 0, 0.04);
 $list-box-shadow-bg-width: rgba(0, 0, 0, 0.02);
-
+$list-box-shadow-bg-hover: rgba(0, 0, 0, 0.1);
 //color
 $btn-color-grey: #b4b4b4;
 $form-color-red: #ff8484;
@@ -35,6 +35,10 @@ $container-max-width: 1440px;
 
 //media
 $xs: 350px;
+$xs-xs: 450px;
+$xs-s: 600px;
 $sm: 735px;
+$sm-s: 830px;
+$md-s: 930px;
 $md: 1070px;
 $lg: 1430px;

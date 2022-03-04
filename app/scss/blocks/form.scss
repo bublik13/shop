@@ -1,17 +1,14 @@
 .form {
-  width: 100%;
   background-color: $form-bg-white;
-  flex-grow: 1;
   box-shadow: 0px 20px 30px $form-box-shadow-bg-height,
     0px 6px 10px $form-box-shadow-bg-width;
   max-height: 440px;
   padding: 22px 24px 24px;
   border-radius: 4px;
   @include media($sm) {
-    min-width: 332px;
     position: sticky;
-    top: 85px;
-    left: 32px;
+    top: 0;
+    left: 0;
   }
 }
 .form__wrap {
