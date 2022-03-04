@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 16px;
-  margin-left: auto;
   list-style: none;
   @include media($md) {
+    margin-left: auto;
     grid-template-columns: repeat(2, 1fr);
   }
   @include media($lg) {
