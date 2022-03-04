@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@0,600;1,400&family=Inter:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/main.css?t=1646418121514" />
+    <link rel="stylesheet" href="css/main.css?t=1646420329325" />
   </head>
   <body class="body js-body">
     <div class="header">
       <div class="header__container container">
         <div class="header__title">Добавление товара</div>
         <div class="header__dropdown">
-            <select class="header__btn btn btn--active btn-secondary" v-model="selected">
+            <select class="header__btn btn btn-secondary" v-model="selected">
             <option disabled value="">По умолчанию</option>
             <option class="dropdown-item-btn btn">По умолчанию 1</option>
             <option class="dropdown-item-btn btn">По умолчанию 2</option>
@@ -27,7 +27,7 @@
     </div>
     <section class="main">
         <div class="main__container container">
-            <form class="main__form form main__form--active js-form" id="app" @submit="checkForm" action="https://vuejs.org/" method="post" novalidate="true">
+            <form class="main__form form js-form" id="app" @submit="checkForm" action="https://vuejs.org/" method="post" novalidate="true">
                 <p class="form__wrap">
                     <label class="form__label" for="name">Наименование товара</label>
                     <input class="form__name" id="name" v-model="name" type="text" placeholder="Введите наименование товара">
@@ -64,7 +64,7 @@
                     <input type="submit" v-bind:disabled="isButtonDisabled" class="form__button" value="Добавить товар">
                 </p>
             </form>
-            <button type="button" aria-label="close" class="burger main__burger js-burger burger--active">
+            <button type="button" aria-label="close" class="burger main__burger js-burger">
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
@@ -235,7 +235,7 @@
     </section>
 
     <!-- подключаем js -->
-    <script src="js/main.js?t=1646418121514"></script>
+    <script src="js/main.js?t=1646420329325"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
         exports.handler = async (event, context) => {
