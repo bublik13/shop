@@ -1,13 +1,16 @@
-.header__container{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 32px;
-    padding-bottom: 8px;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include media($md) {
+    padding-bottom: 17px;
+  }
 }
-
-.dropdown-menu {
-  position: absolute;
-  display: none;
-  text-align: left;
-  list-style: none;
+.header__title {
+  @include font(15px, 25px, 600, $second-family);
+  color: $header-color-grey;
+  @include media($md) {
+    @include font(28px, 32px, 600, $second-family);
+  }
 }

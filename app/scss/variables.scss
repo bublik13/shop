@@ -1,19 +1,41 @@
 //background-color
 $body-bg: #ffffff;
+$btn-bg: #fffefb;
+$burger-bg: #000;
+$burger-bg: #000;
+$form-bg-white: #fffefb;
+$form-bg-grey: #eeeeee;
+$list-bg-white: #fffefb;
+//fonts
+$basic-family: "Roboto", "Arial", "Helvetica", sans-serif;
 
 //fonts
-$basic-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+$basic-family: "Source Sans Pro", "IBM Plex Mono", "IBM Plex Sans", "Roboto",
+  "Arial", sans-serif;
+$second-family: "Source Sans Pro", Arial, sans-serif;
+$inter-family: "Inter", sans-serif, "Oswald";
 
-//fonts
-$basic-family: "Roboto", "Arial", "Helvetica", "Oswald", sans-serif;
-$second-family: "Oswald", Arial, sans-serif;
-$arial-family: Arial, sans-serif, "Oswald";
+//box-shadow
+$btn-box-shadow-bg: rgba(0, 0, 0, 0.1);
+$form-box-shadow-bg-height:rgba(0, 0, 0, 0.04);
+$form-box-shadow-bg-width:rgba(0, 0, 0, 0.02);
+$form-box-shadow-bg-smoll: rgba(0, 0, 0, 0.1);
+$list-box-shadow-bg-height:rgba(0, 0, 0, 0.04);
+$list-box-shadow-bg-width:rgba(0, 0, 0, 0.02);
+
+
+//color
+$btn-color-grey: #b4b4b4;
+$form-color-red: #ff8484;
+$form-color-grey: #B4B4B4;
+$header-color-grey: #3f3f3f;
+$list-color-grey: #3f3f3f;
 //container
 $container-min-width: 320px;
 $container-max-width: 1440px;
 
 //media
 $xs: 350px;
-$sm: 556px;
-$md: 768px;
-$lg: 1200px;
+$sm: 730px;
+$md: 1070px;
+$lg: 1430px;

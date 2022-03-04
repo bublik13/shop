@@ -1,16 +1,16 @@
 .btn {
   display: inline-block;
   transition: ease-out 0.2s;
-  background-color: #FFFEFB;
+  background-color: $btn-bg;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
   padding: 10px 16px;
   border-radius: 4px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px $btn-box-shadow-bg;
   border: none;
   @include font(12px, 15px, 400, $second-family);
-  color: #B4B4B4;
+  color: $btn-color-grey;
   max-width: 129px;
 }
 .btn-secondary::after {
@@ -23,4 +23,3 @@
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
-

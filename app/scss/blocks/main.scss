@@ -1,0 +1,42 @@
+.main__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.main__form {
+  position: fixed;
+  top: 71px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  transition: transform 0.2s ease;
+  transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+  overflow-y: auto;
+  @include media($sm) {
+    position: static;
+    opacity: 1;
+    transform: none;
+    padding-top: 0;
+    pointer-events: auto;
+  }
+  @include media($lg) {
+    background-color: transparent;
+  }
+}
+.main__form--active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.main__burger {
+  margin-left: auto;
+  z-index: 3;
+  position: fixed;
+  top: 71px;
+  right: 40px;
+  @include media($sm) {
+    display: none;
+  }
+}
