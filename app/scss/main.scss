@@ -6,7 +6,11 @@
 
 //подключаем БЭМ блоки
 @import 'blocks/test';
+@import 'blocks/body';
 @import 'blocks/container';
 @import 'blocks/header';
+@import 'blocks/main';
 @import 'blocks/btn';
 @import 'blocks/form';
+@import 'blocks/list';
+@import 'blocks/burger';
