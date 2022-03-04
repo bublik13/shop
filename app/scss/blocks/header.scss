@@ -1,0 +1,13 @@
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  text-align: left;
+  list-style: none;
+}

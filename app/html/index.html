@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header__container container">
+        <div class="header__title">Добавление товара</div>
+        <div class="header__dropdown">
+            <select class="header__btn btn btn--active btn-secondary" v-model="selected">
+            <option disabled value="">По умолчанию</option>
+            <option class="dropdown-item-btn btn">По умолчанию 1</option>
+            <option class="dropdown-item-btn btn">По умолчанию 2</option>
+            <option class="dropdown-item-btn btn">По умолчанию 3</option>
+            </select>
+            <span></span>
+        </div>
+      </div>
+    </div>
+    <section class="main">
+        <div class="main__container container">
+            <!-- <form class="main__form form">
+                <div class="form__wrap">
+                  <label class="form__label">Наименование товара</label>
+                  <input type="text" class="form__name" required placeholder="Введите наименование товара">
+                </div>
+                <div class="form__wrap">
+                    <label for="textarea" class="form__label">Описание товара</label>
+                    <textarea id="textarea" class="form__textarea" required placeholder="Введите описание товара"></textarea>
+                </div>
+                <div class="form__wrap">
+                  <label  class="form__label">Ссылка на изображение товара</label>
+                  <input type="text" class="form__link" id="inputCity" required placeholder="Введите ссылку">
+                </div>
+                <div class="form__wrap">
+                    <label  class="form__label">Цена товара</label>
+                    <input type="text" class="form__prise" id="inputCity" required placeholder="Цена товара">
+                </div>
+                <div class="form__wrap-button">
+                  <button type="submit" class="button">Добавить товар</button>
+                </div>
+            </form> -->
+            <form class="main__form form" id="app" @submit="checkForm" action="https://vuejs.org/" method="post" novalidate="true">
+                <p class="form__wrap">
+                    <label class="form__label" for="name">Наименование товара</label>
+                    <input class="form__name" id="name" v-model="name" type="text" placeholder="Введите наименование товара">
+                    <p  v-if="errors.length">
+                        <ul>
+                            <li class="form__error" v-for="error in errors">{{ error }}</li>
+                        </ul>
+                    </p>
+                </p>
+                <p class="form__wrap">
+                    <label for="textarea" class="form__label" >Описание товара</label>
+                    <textarea class="form__textarea"  v-model="message" placeholder="Введите описание товара"></textarea>
+                </p>
+                <p class="form__wrap">
+                    <label class="form__label" for="url">Ссылка на изображение товара</label>
+                    <input class="form__name" id="link" v-model="link" type="text" placeholder="Введите ссылку">
+                    <p class="form__errors" v-if="errors.length">
+                        <ul>
+                            <li class="form__error" v-for="error in errors">{{ error }}</li>
+                        </ul>
+                    </p>
+                </p>
+                <p  class="form__wrap" class="form__wrap">
+                    <label class="form__label" for="name">Цена товара</label>
+                    <input class="form__name" id="price" v-model="price" type="text" placeholder="Цена товара">
+                    <p  v-if="errors.length">
+                        <ul>
+                            <li class="form__error" v-for="error in errors">{{ error }}</li>
+                        </ul>
+                    </p>
+                </p>
+          
+                <p class="form__wrap-button">
+                    <input type="submit" v-bind:disabled="isButtonDisabled" class="button" value="Добавить товар">
+                </p>
+            </form>
+
+        </div>       
+    </section>
+
+    <!-- подключаем js -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+            exports.handler = async (event, context) => {
+
+        const badNames = ['vista', 'empire', 'mbp'];
+        const name = event.queryStringParameters.name;
+
+        if (badNames.includes(name)) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({error: 'Invalid name passed.'})
+        }
+        }
+
+        return {
+        statusCode: 204
+        }
+        }
+        </script>
+
+        <script>
+const app = new Vue({
+  el: '#app',
+  data: {
+    errors: [],
+    name: null,
+    email: null,
+    movie: null
+  },
+  methods: {
+    checkForm: function (e) {
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push('Поле является обязательным.');
+      }
+
+      if (!this.errors.length) {
+        return true;
+      }
+
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  }
+})
+
+        </script>
+
+  </body>
+</html>
