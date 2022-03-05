@@ -1,6 +1,9 @@
 .main__container {
-  padding-top: 32px;
+  padding-top: 40px;
   padding-bottom: 30px;
+  @include media($sm) {
+    padding-top: 32px;
+  }
 }
 .main__wrap-top {
   display: flex;
@@ -36,7 +39,7 @@
 }
 .main__form {
   position: fixed;
-  top: 71px;
+  top: 20px;
   right: 20px;
   width: 280px;
   z-index: 2;
@@ -66,7 +69,7 @@
   margin-left: auto;
   z-index: 3;
   position: absolute;
-  top: 80px;
+  top: 20px;
   right: 20px;
   @include media($sm) {
     display: none;

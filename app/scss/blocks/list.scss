@@ -19,7 +19,8 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.list__item {
+.list__card {
+  text-decoration: none;
   background-color: $list-bg-white;
   box-shadow: 0px 20px 30px $list-box-shadow-bg-height,
     0px 6px 10px $list-box-shadow-bg-width;
@@ -29,7 +30,4 @@
     box-shadow: 0px 7px 15px $list-box-shadow-bg-hover,
       0px 7px 15px $list-box-shadow-bg-hover;
   }
-}
-.list__card {
-  text-decoration: none;
 }
