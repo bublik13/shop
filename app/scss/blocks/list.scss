@@ -2,57 +2,32 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 16px;
-  margin-left: auto;
-  @include media($md) {
+  list-style: none;
+  @include media($xs-xs) {
     grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($xs-s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($sm-s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media($md) {
+    grid-template-columns: repeat(3, minmax(211px, 1fr));
   }
   @include media($lg) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.list__item {
+.list__card {
   text-decoration: none;
   background-color: $list-bg-white;
   box-shadow: 0px 20px 30px $list-box-shadow-bg-height,
     0px 6px 10px $list-box-shadow-bg-width;
   border-radius: 4px;
-  width: 80%;
-  margin: 0 auto;
-  @include media($sm) {
-    width: 100%;
-    margin: 0;
-  }
-}
-.list__img {
-  display: block;
-  border-radius: 4px 4px 0 0;
-  width: 100%;
-  object-fit: cover;
-}
-.list__wrap {
-  padding: 16px 16px 24px;
-}
-.list__name {
-  color: $list-color-grey;
-  @include font(15px, 20px, 600, $second-family);
-  margin-bottom: 16px;
-  @include media($sm) {
-    @include font(20px, 25px, 600, $second-family);
-  }
-}
-.list__desc {
-  max-width: 300px;
-  color: $list-color-grey;
-  @include font(14px, 18px, 400, $second-family);
-  margin-bottom: 32px;
-  @include media($sm) {
-    @include font(16px, 20px, 400, $second-family);
-  }
-}
-.list__price {
-  color: $list-color-grey;
-  @include font(20px, 27px, 600, $second-family);
-  @include media($sm) {
-    @include font(24px, 30px, 600, $second-family);
+  transition: 0.2s ease-out;
+  &:hover {
+    box-shadow: 0px 7px 15px $list-box-shadow-bg-hover,
+      0px 7px 15px $list-box-shadow-bg-hover;
   }
 }
